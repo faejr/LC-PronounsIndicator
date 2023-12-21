@@ -1,0 +1,9 @@
+{
+  "name": "PronounsIndicator",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Adds pronouns under username",
+  "dependencies": [
+	"2018-LC_API-2.2.0"
+  ]
+}

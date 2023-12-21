@@ -1,0 +1,6 @@
+bin/
+obj/
+thunderstore/*.dll
+thunderstore/*.pdb
+thunderstore/*.zip
+*.csproj.user
