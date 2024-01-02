@@ -1,7 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
-using LC_API.ServerAPI;
+using LC_API.Networking;
 using UnityEngine;
 
 namespace PronounsIndicator
@@ -12,7 +12,7 @@ namespace PronounsIndicator
     {
         public const string ModGUID = "faejr.pronounsindicator";
         public const string ModName = "Pronouns Indicator";
-        public const string ModVersion = "1.0.0";
+        public const string ModVersion = "2.0.0";
         public static ManualLogSource logger;
         public static bool Initialized { get; private set; }
         public static ConfigEntry<string> pronouns;
@@ -54,7 +54,7 @@ namespace PronounsIndicator
                 DontDestroyOnLoad(gameObject);
                 gameObject.AddComponent<PronounManager>();
                 Logger.LogInfo("Pronoun Manager Started!");
-                Networking.GetString += PronounManager.NetGetString;
+                Network.RegisterAll(typeof(PronounManager));
             }
         }
     }
