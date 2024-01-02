@@ -9,5 +9,8 @@ After joining a game you can run the command `/pronouns` to set your pronouns. N
 
 ## Changelog
 
+### v2.1.0
+Make methods public instead of internal
+
 ### v2.0.0
 Update to use LC-API's new networking methods
