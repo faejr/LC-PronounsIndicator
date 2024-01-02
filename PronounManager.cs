@@ -39,20 +39,20 @@ class PronounManager : MonoBehaviour
     }
 
     [NetworkMessage(SIG_SEND_PRONOUNS)]
-    internal static void ReceivedPronounsHandler(ulong senderId, string pronouns)
+    public static void ReceivedPronounsHandler(ulong senderId, string pronouns)
     {
         Plugin.logger.LogInfo($"{senderId}: {pronouns}");
         AddPronounsToBillboardText(senderId, pronouns);
     }
 
-    static void AddPronounsToBillboardText(ulong senderId, string pronouns)
+    public static void AddPronounsToBillboardText(ulong senderId, string pronouns)
     {
         var username = StartOfRound.Instance.allPlayerScripts[senderId].playerUsername;
         StartOfRound.Instance.allPlayerScripts[senderId].usernameBillboardText.text = username + $"<br>({pronouns})";
     }
 
     [NetworkMessage(SIG_REQ_PRONOUNS)]
-    internal static void RequestPronounsHandler(ulong senderId)
+    public static void RequestPronounsHandler(ulong senderId)
     {
         Plugin.logger.LogInfo($"{senderId} requested pronouns");
         SendPronouns();

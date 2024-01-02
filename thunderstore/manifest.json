@@ -1,6 +1,6 @@
 {
   "name": "PronounsIndicator",
-  "version_number": "2.0.0",
+  "version_number": "2.1.0",
   "website_url": "https://github.com/faejr/LC-PronounsIndicator",
   "description": "Adds pronouns under username",
   "dependencies": ["2018-LC_API-3.2.3"]

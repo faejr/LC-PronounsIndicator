@@ -12,7 +12,7 @@ namespace PronounsIndicator
     {
         public const string ModGUID = "faejr.pronounsindicator";
         public const string ModName = "Pronouns Indicator";
-        public const string ModVersion = "2.0.0";
+        public const string ModVersion = "2.1.0";
         public static ManualLogSource logger;
         public static bool Initialized { get; private set; }
         public static ConfigEntry<string> pronouns;
