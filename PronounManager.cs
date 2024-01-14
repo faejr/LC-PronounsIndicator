@@ -1,4 +1,5 @@
 using BepInEx;
+using LC_API.GameInterfaceAPI.Features;
 using LC_API.Networking;
 using UnityEngine;
 
@@ -48,7 +49,7 @@ class PronounManager : MonoBehaviour
     public static void AddPronounsToBillboardText(ulong senderId, string pronouns)
     {
         var username = StartOfRound.Instance.allPlayerScripts[senderId].playerUsername;
-        StartOfRound.Instance.allPlayerScripts[senderId].usernameBillboardText.text = username + $"<br>({pronouns})";
+        Player.Get(senderId).PlayerController.usernameBillboardText.text = username + $"<br>({pronouns})";
     }
 
     [NetworkMessage(SIG_REQ_PRONOUNS)]
